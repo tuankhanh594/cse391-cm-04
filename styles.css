@@ -15,9 +15,7 @@ body {
   padding-bottom: 2rem;
 }
 
-/* ===================================
-   HEADER & NAV (FLEXBOX LAYOUT)
-   =================================== */
+/* YÊU CẦU HEADER P04 */
 .cm-header {
   display: flex;
   justify-content: space-between;
@@ -32,7 +30,8 @@ body {
   margin: 0;
 }
 
-.cm-nav-list {
+/* YÊU CẦU NAV P04 (Dùng đúng .cm-nav ul như đề bài) */
+.cm-nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -42,23 +41,21 @@ body {
   padding: 0;
 }
 
-.cm-nav-list a {
+.cm-nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
-.cm-nav-list a:hover {
+.cm-nav a:hover {
   text-decoration: underline;
 }
 
-/* ===================================
-   MAIN LAYOUT & GRID PRODUCTS
-   =================================== */
 main {
   padding: 0 2rem;
 }
 
+/* YÊU CẦU GRID P04 */
 .cm-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -75,12 +72,6 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cm-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .cm-card figure {
@@ -90,14 +81,12 @@ main {
 .cm-card img {
   max-width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 4px;
 }
 
 .cm-card-title {
   font-size: 1.1rem;
   margin: 0.5rem 0 0.25rem 0;
-  color: #0f172a;
 }
 
 .cm-card-category {
@@ -112,9 +101,7 @@ main {
   margin: 0;
 }
 
-/* ===================================
-   TABLE & FORM STYLING
-   =================================== */
+/* GIỮ FORM VÀ TABLE TỪ P03 */
 .cm-table {
   width: 100%;
   border-collapse: collapse;
@@ -122,8 +109,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.cm-table th,
-.cm-table td {
+.cm-table th, .cm-table td {
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid #e2e8f0;
   text-align: left;
@@ -134,47 +120,17 @@ main {
   color: white;
 }
 
-.cm-table tbody tr:nth-child(even) {
-  background: #f1f5f9;
-}
+.cm-table tbody tr:nth-child(even) { background: #f1f5f9; }
+.cm-table tbody tr:hover { background: #ccfbf1; }
 
-.cm-table tbody tr:hover {
-  background: #ccfbf1;
+input, select, textarea {
+  width: 100%; max-width: 24rem; padding: 0.5rem;
+  border: 1px solid #cbd5e1; border-radius: 4px;
 }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--cm-primary); }
 
-input,
-select,
-textarea {
-  width: 100%;
-  max-width: 24rem;
-  padding: 0.5rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 4px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid var(--cm-primary);
-}
-
-button[type="submit"],
 button {
-  background: var(--cm-primary);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  background: var(--cm-primary); color: white;
+  border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;
 }
-
-button[type="submit"]:hover,
-button:hover {
-  background: #0d9488;
-}
-
-footer {
-  padding: 1rem 2rem;
-  border-top: 1px solid #e2e8f0;
-  margin-top: 2rem;
-}
+button:hover { background: #0d9488; }
